@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11131b">
+    <meta name="description" content="A polished, keyboard-friendly calculator for everyday arithmetic.">
+    <title>Orbit — Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="ambient ambient--violet" aria-hidden="true"></div>
+      <div class="ambient ambient--blue" aria-hidden="true"></div>
+      <section class="calculator" aria-label="Calculator">
+        <header class="calculator__header">
+          <a class="brand" href="#" aria-label="Orbit calculator home">
+            <span class="brand__mark" aria-hidden="true"><span></span></span>
+            <span>orbit<span class="brand__period">.</span></span>
+          </a>
+          <span class="header-note"><span class="status-dot"></span> PRECISION MODE</span>
+        </header>
+
+        <div class="display" aria-label="Calculator display">
+          <div class="display__label">EXPRESSION</div>
+          <div class="display__expression" id="expression" aria-live="polite" aria-atomic="true">0</div>
+          <div class="display__divider"></div>
+          <div class="display__bottom">
+            <span class="display__label">RESULT</span>
+            <output class="display__result" id="result" aria-live="polite" aria-atomic="true">Ready</output>
+          </div>
+        </div>
+
+        <div class="keypad" role="group" aria-label="Calculator keys">
+          <button class="key key--utility key--clear" type="button" data-action="clear" aria-label="All clear">AC</button>
+          <button class="key key--utility key--delete" type="button" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button class="key key--utility" type="button" data-action="percent" aria-label="Percent">%</button>
+          <button class="key key--operator" type="button" data-value="/" aria-label="Divide">÷</button>
+
+          <button class="key" type="button" data-value="7">7</button>
+          <button class="key" type="button" data-value="8">8</button>
+          <button class="key" type="button" data-value="9">9</button>
+          <button class="key key--operator" type="button" data-value="*" aria-label="Multiply">×</button>
+
+          <button class="key" type="button" data-value="4">4</button>
+          <button class="key" type="button" data-value="5">5</button>
+          <button class="key" type="button" data-value="6">6</button>
+          <button class="key key--operator" type="button" data-value="-" aria-label="Subtract">−</button>
+
+          <button class="key" type="button" data-value="1">1</button>
+          <button class="key" type="button" data-value="2">2</button>
+          <button class="key" type="button" data-value="3">3</button>
+          <button class="key key--operator" type="button" data-value="+" aria-label="Add">+</button>
+
+          <button class="key key--utility" type="button" data-action="sign" aria-label="Toggle sign">+/−</button>
+          <button class="key key--zero" type="button" data-value="0">0</button>
+          <button class="key" type="button" data-value="." aria-label="Decimal point">.</button>
+          <button class="key key--equals" type="button" data-action="equals" aria-label="Equals">=</button>
+        </div>
+
+        <footer class="calculator__footer">
+          <span>Thoughtful math, made simple.</span>
+          <span class="keyboard-hint"><kbd>Enter</kbd> to calculate</span>
+        </footer>
+      </section>
+      <p class="page-caption">A little clarity in every calculation.</p>
+    </main>
+  </body>
+</html>
